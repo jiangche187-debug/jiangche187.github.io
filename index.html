@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我的博客</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- 导航栏 -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#" class="nav__logo">Nexus<span>Log</span></a>
+      <ul class="nav__menu" id="nav-menu">
+        <li><a href="#home" class="nav__link active">首页</a></li>
+        <li><a href="#blog" class="nav__link">文章</a></li>
+        <li><a href="#about" class="nav__link">关于</a></li>
+        <li><a href="#contact" class="nav__link">联系</a></li>
+      </ul>
+      <div class="nav__toggle" id="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 首页英雄区 -->
+    <section class="hero" id="home">
+      <div class="hero__bg"></div>
+      <div class="hero__content container">
+        <p class="hero__greeting animate">你好，我是</p>
+        <h1 class="hero__title animate">一个热爱写作的<br>开发者</h1>
+        <p class="hero__subtitle animate">用文字记录技术与思考，探索代码之外的无限可能。</p>
+        <div class="hero__actions animate">
+          <a href="#blog" class="btn btn--primary">阅读文章</a>
+          <a href="#about" class="btn btn--outline">了解更多</a>
+        </div>
+      </div>
+      <div class="hero__scroll">
+        <span>向下滚动</span>
+        <div class="hero__scroll-icon"></div>
+      </div>
+    </section>
+
+    <!-- 推荐文章区 -->
+    <section class="featured" id="blog">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">最新文章</h2>
+          <p class="section-subtitle">分享关于前端开发、设计模式与工程实践的想法</p>
+        </div>
+        <div class="blog-grid">
+          <article class="blog-card">
+            <div class="blog-card__image">
+              <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=600&h=400&fit=crop" alt="React 性能优化" loading="lazy">
+              <span class="blog-card__tag">React</span>
+            </div>
+            <div class="blog-card__body">
+              <time class="blog-card__date" datetime="2026-05-28">2026年5月28日</time>
+              <h3 class="blog-card__title">React 性能优化的 7 个实用技巧</h3>
+              <p class="blog-card__excerpt">深入探讨 useMemo、useCallback、虚拟列表等核心优化手段，让你的 React 应用跑得更快。</p>
+              <div class="blog-card__footer">
+                <span class="blog-card__read-time">8 分钟阅读</span>
+                <a href="#" class="blog-card__link">阅读更多 →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-card__image">
+              <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=400&fit=crop" alt="CSS Grid 布局" loading="lazy">
+              <span class="blog-card__tag">CSS</span>
+            </div>
+            <div class="blog-card__body">
+              <time class="blog-card__date" datetime="2026-05-20">2026年5月20日</time>
+              <h3 class="blog-card__title">掌握 CSS Grid：从入门到精通</h3>
+              <p class="blog-card__excerpt">一篇带你彻底搞懂 CSS Grid 布局，包含大量实战案例和常见布局模式。</p>
+              <div class="blog-card__footer">
+                <span class="blog-card__read-time">12 分钟阅读</span>
+                <a href="#" class="blog-card__link">阅读更多 →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-card__image">
+              <img src="https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=600&h=400&fit=crop" alt="TypeScript 技巧" loading="lazy">
+              <span class="blog-card__tag">TypeScript</span>
+            </div>
+            <div class="blog-card__body">
+              <time class="blog-card__date" datetime="2026-05-12">2026年5月12日</time>
+              <h3 class="blog-card__title">TypeScript 高级类型实战指南</h3>
+              <p class="blog-card__excerpt">条件类型、模板字面量类型、映射类型——这些高级特性在日常开发中的真实应用场景。</p>
+              <div class="blog-card__footer">
+                <span class="blog-card__read-time">10 分钟阅读</span>
+                <a href="#" class="blog-card__link">阅读更多 →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-card__image">
+              <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=600&h=400&fit=crop" alt="Node.js 后端" loading="lazy">
+              <span class="blog-card__tag">Node.js</span>
+            </div>
+            <div class="blog-card__body">
+              <time class="blog-card__date" datetime="2026-05-05">2026年5月5日</time>
+              <h3 class="blog-card__title">用 Node.js 构建高性能 REST API</h3>
+              <p class="blog-card__excerpt">从项目结构、错误处理到数据库优化，全方位构建生产级别的 Node.js 后端服务。</p>
+              <div class="blog-card__footer">
+                <span class="blog-card__read-time">15 分钟阅读</span>
+                <a href="#" class="blog-card__link">阅读更多 →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-card__image">
+              <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop" alt="DevOps 实践" loading="lazy">
+              <span class="blog-card__tag">DevOps</span>
+            </div>
+            <div class="blog-card__body">
+              <time class="blog-card__date" datetime="2026-04-28">2026年4月28日</time>
+              <h3 class="blog-card__title">CI/CD 流水线搭建完全指南</h3>
+              <p class="blog-card__excerpt">使用 GitHub Actions 从零搭建自动化测试、构建和部署流水线的完整教程。</p>
+              <div class="blog-card__footer">
+                <span class="blog-card__read-time">9 分钟阅读</span>
+                <a href="#" class="blog-card__link">阅读更多 →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-card__image">
+              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" alt="Web 性能" loading="lazy">
+              <span class="blog-card__tag">性能</span>
+            </div>
+            <div class="blog-card__body">
+              <time class="blog-card__date" datetime="2026-04-20">2026年4月20日</time>
+              <h3 class="blog-card__title">Web 性能优化：从 Core Web Vitals 出发</h3>
+              <p class="blog-card__excerpt">LCP、FID、CLS 三大核心指标详解，以及针对性优化策略的落地实践。</p>
+              <div class="blog-card__footer">
+                <span class="blog-card__read-time">7 分钟阅读</span>
+                <a href="#" class="blog-card__link">阅读更多 →</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 关于我 -->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="about__grid">
+          <div class="about__image">
+            <div class="about__image-wrapper">
+              <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=400&h=500&fit=crop" alt="博主照片" loading="lazy">
+            </div>
+          </div>
+          <div class="about__content">
+            <h2 class="section-title">关于我</h2>
+            <p class="about__text">
+              你好！我是一名全栈开发者，专注于 Web 技术与开源社区。
+              工作之余，我喜欢将踩过的坑和学到的东西整理成文章，
+              希望这些内容能帮助更多开发者少走弯路。
+            </p>
+            <p class="about__text">
+              目前主要使用 React、TypeScript 和 Node.js 进行开发，
+              对系统设计和性能优化有着浓厚的兴趣。
+            </p>
+            <div class="about__stats">
+              <div class="stat">
+                <span class="stat__number">50+</span>
+                <span class="stat__label">文章</span>
+              </div>
+              <div class="stat">
+                <span class="stat__number">10K+</span>
+                <span class="stat__label">月阅读量</span>
+              </div>
+              <div class="stat">
+                <span class="stat__number">5</span>
+                <span class="stat__label">年经验</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 联系我 -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">联系我</h2>
+          <p class="section-subtitle">有问题或建议？欢迎随时与我交流</p>
+        </div>
+        <form class="contact__form" id="contact-form">
+          <div class="form-group">
+            <label for="name">姓名</label>
+            <input type="text" id="name" placeholder="你的名字" required>
+          </div>
+          <div class="form-group">
+            <label for="email">邮箱</label>
+            <input type="email" id="email" placeholder="your@email.com" required>
+          </div>
+          <div class="form-group form-group--full">
+            <label for="message">留言</label>
+            <textarea id="message" rows="5" placeholder="写下你想说的话..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary">发送消息</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="#" class="nav__logo">Nexus<span>Log</span></a>
+          <p>用文字记录技术与思考。</p>
+        </div>
+        <div class="footer__links">
+          <h4>快速链接</h4>
+          <ul>
+            <li><a href="#home">首页</a></li>
+            <li><a href="#blog">文章</a></li>
+            <li><a href="#about">关于</a></li>
+            <li><a href="#contact">联系</a></li>
+          </ul>
+        </div>
+        <div class="footer__social">
+          <h4>社交媒体</h4>
+          <div class="social-icons">
+            <a href="#" class="social-icon" aria-label="GitHub">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="Twitter">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="邮箱">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 NexusLog. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
